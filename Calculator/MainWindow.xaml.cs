@@ -28,27 +28,27 @@ namespace Calculator
         private void Addition_ButtonClicked(object sender, RoutedEventArgs e)
         {
 
-             CalculateWithOperator(addition_Button.Content.ToString());
+             CalculateWithOperator("+");
         }
 
         private void Subtraction_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator(subtraction_Button.Content.ToString());
+            CalculateWithOperator("-");
         }
 
         private void Multiply_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator(multiply_Button.Content.ToString());
+            CalculateWithOperator("*");
         }
 
         private void Divide_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator(divide_Button.Content.ToString());
+            CalculateWithOperator("/");
         }
 
         private void Modulus_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator(modulus_Button.Content.ToString());
+            CalculateWithOperator("%");
         }
 
         private void SquareRoot_ButtonClicked(object sender, RoutedEventArgs e)
@@ -83,7 +83,7 @@ namespace Calculator
                 case "sqrt":
                     break;
                 default:
-                    error = "You have not entered any number";
+                    error = "Wrong button!!";
                     Result_Textbox.Text = error;
                     break;
             }
