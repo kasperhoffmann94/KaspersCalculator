@@ -28,27 +28,27 @@ namespace Calculator
         private void Addition_ButtonClicked(object sender, RoutedEventArgs e)
         {
 
-             CalculateWithOperator(0);
+             CalculateWithOperator("+");
         }
 
         private void Subtraction_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator(1);
+            CalculateWithOperator("-");
         }
 
         private void Multiply_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator(2);
+            CalculateWithOperator("*");
         }
 
         private void Divide_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator(3);
+            CalculateWithOperator("/");
         }
 
         private void Modulus_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator(4);
+            CalculateWithOperator("%");
         }
 
         private void SquareRoot_ButtonClicked(object sender, RoutedEventArgs e)
@@ -57,33 +57,34 @@ namespace Calculator
         }
 
 
-        private void CalculateWithOperator(int operatorInt)
+        private void CalculateWithOperator(string operatorString)
         {
             int firstInput = int.Parse(Number1_Textbox.Text);
             int secondInput = int.Parse(Number2_Textbox.Text);
             int result = 0;
-            switch (operatorInt)
+            string error;
+            switch (operatorString)
             {
-                case 0:
+                case "+":
                     result = firstInput + secondInput;
                     break;
-                case 1:
+                case "-":
                     result = firstInput - secondInput;
                     break;
-                case 2:
+                case "*":
                     result = firstInput * secondInput;
                     break;
-                case 3:
+                case "/":
                     result = firstInput / secondInput;
                     break;
-                case 4:
+                case "%":
                     result = firstInput % secondInput;
                     break;
-                case 5:
-
+                case "sqrt":
                     break;
-                case 6:
-
+                default:
+                    error = "You have not entered any number";
+                    Result_Textbox.Text = error;
                     break;
             }
 
