@@ -9,13 +9,13 @@
     <Grid>
         <Button Content="Button" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="129,100,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.237,0.557"/>
-        <TextBox x:Name="Number1" HorizontalAlignment="Left" Height="35" Margin="10,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontSize="24"/>
-        <TextBox x:Name="Number2" HorizontalAlignment="Left" Height="35" Margin="129,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontSize="24"/>
+        <TextBox x:Name="Number1_Textbox" HorizontalAlignment="Left" Height="35" Margin="10,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontSize="24"/>
+        <TextBox x:Name="Number2_Textbox" HorizontalAlignment="Left" Height="35" Margin="129,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontSize="24"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="129,145,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.204,0.489"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="237,100,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="237,145,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox x:Name="Result" HorizontalAlignment="Left" Height="35" Margin="267,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontSize="24" IsEnabled="False"/>
+        <TextBox x:Name="Result_Textbox" HorizontalAlignment="Left" Height="35" Margin="267,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" FontSize="24" IsEnabled="False"/>
         <Label Content="=" HorizontalAlignment="Left" Margin="234,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.087,-0.017"/>
         <Button Content="+" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="75" Click="Addition_ButtonClicked"/>
         <Button Content="-" HorizontalAlignment="Left" Margin="129,100,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.237,0.557" Click="Subtraction_ButtonClicked"/>
