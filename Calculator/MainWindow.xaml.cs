@@ -28,27 +28,27 @@ namespace Calculator
         private void Addition_ButtonClicked(object sender, RoutedEventArgs e)
         {
 
-             CalculateWithOperator("+");
+             CalculateWithOperator(addition_Button.Content.ToString());
         }
 
         private void Subtraction_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator("-");
+            CalculateWithOperator(subtraction_Button.Content.ToString());
         }
 
         private void Multiply_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator("*");
+            CalculateWithOperator(multiply_Button.Content.ToString());
         }
 
         private void Divide_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator("/");
+            CalculateWithOperator(divide_Button.Content.ToString());
         }
 
         private void Modulus_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            CalculateWithOperator("%");
+            CalculateWithOperator(modulus_Button.Content.ToString());
         }
 
         private void SquareRoot_ButtonClicked(object sender, RoutedEventArgs e)
