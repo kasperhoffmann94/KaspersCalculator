@@ -24,5 +24,35 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void Addition_ButtonClicked(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Subtraction_ButtonClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Multiply_ButtonClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Divide_ButtonClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modulus_ButtonClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SquareRoot_ButtonClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
