@@ -27,22 +27,23 @@ namespace Calculator
 
         private void Addition_ButtonClicked(object sender, RoutedEventArgs e)
         {
-            
+           
+           Result.Text = (int.Parse(Number1.Text) + int.Parse(Number2.Text)).ToString();
         }
 
         private void Subtraction_ButtonClicked(object sender, RoutedEventArgs e)
         {
-
+            Result.Text = (int.Parse(Number1.Text) - int.Parse(Number2.Text)).ToString();
         }
 
         private void Multiply_ButtonClicked(object sender, RoutedEventArgs e)
         {
-
+            Result.Text = (int.Parse(Number1.Text) * int.Parse(Number2.Text)).ToString();
         }
 
         private void Divide_ButtonClicked(object sender, RoutedEventArgs e)
         {
-
+            Result.Text = (int.Parse(Number1.Text) / int.Parse(Number2.Text)).ToString();
         }
 
         private void Modulus_ButtonClicked(object sender, RoutedEventArgs e)
