@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.XPath;
 
 namespace Calculator
 {
@@ -69,8 +70,7 @@ namespace Calculator
             CheckForNullOrWhiteSpace(Number2_Textbox.Text, secondInput);
 
             double result = 0;
-            string error;
-            switch (operatorString)
+            string error;            switch (operatorString)
             {
                 case "+":
                     result = firstInput + secondInput;
@@ -97,8 +97,7 @@ namespace Calculator
                     
                     break;
                 default:
-                    error = "Wrong button!!";
-                    Result_Textbox.Text = error;
+                    result = 0;
                     break;
             }
 
@@ -106,15 +105,15 @@ namespace Calculator
         }
 
 
-        private void CheckForNullOrWhiteSpace(string textbox, double input)
+        private void CheckForNullOrWhiteSpace(string textBox, double input)
         {
-            if (string.IsNullOrWhiteSpace(textbox))
+            if (string.IsNullOrWhiteSpace(textBox))
             {
-               textbox = 0.ToString();
+               textBox = 0.ToString();
             }
             else
             {
-                input = double.Parse(textbox);
+                input = double.Parse(textBox);
             }
 
         }
