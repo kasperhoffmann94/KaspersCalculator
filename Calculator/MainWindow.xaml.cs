@@ -53,15 +53,22 @@ namespace Calculator
 
         private void SquareRoot_ButtonClicked(object sender, RoutedEventArgs e)
         {
+          
+            CalculateWithOperator("Sqrt");
 
+            Number2_Textbox.IsEnabled = true;
         }
 
 
         private void CalculateWithOperator(string operatorString)
         {
-            int firstInput = int.Parse(Number1_Textbox.Text);
-            int secondInput = int.Parse(Number2_Textbox.Text);
-            int result = 0;
+            double firstInput = 0;
+            double secondInput = 0;
+
+            CheckForNullOrWhiteSpace(Number1_Textbox.Text, firstInput);
+            CheckForNullOrWhiteSpace(Number2_Textbox.Text, secondInput);
+
+            double result = 0;
             string error;
             switch (operatorString)
             {
@@ -80,7 +87,14 @@ namespace Calculator
                 case "%":
                     result = firstInput % secondInput;
                     break;
-                case "sqrt":
+                case "Sqrt":
+                    if (!string.IsNullOrWhiteSpace(Number2_Textbox.Text))
+                    {
+                        result = Math.Sqrt(firstInput);
+                    }
+                    else if(!string.IsNullOrWhiteSpace(Number1_Textbox.Text))
+                        result = Math.Sqrt(secondInput);
+                    
                     break;
                 default:
                     error = "Wrong button!!";
@@ -90,5 +104,21 @@ namespace Calculator
 
             Result_Textbox.Text = result.ToString();
         }
+
+
+        private void CheckForNullOrWhiteSpace(string textbox, double input)
+        {
+            if (string.IsNullOrWhiteSpace(textbox))
+            {
+               textbox = 0.ToString();
+            }
+            else
+            {
+                input = double.Parse(textbox);
+            }
+
+        }
     }
 }
+
+
